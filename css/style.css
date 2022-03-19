@@ -1,99 +1,74 @@
-*{
-    font-family: 'Courier New', Courier, monospace;
+body{
+    font-family: 'Old Standard TT', serif;
 }
-
-body {
-    background-color: rgb(203, 221, 174);
-}
-.titulo {
-    box-shadow: 1px 5px 5px;
-    background-color: rgb(168, 209, 103);
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+.cabecera{
+    background: #d6c8c8 linear-gradient(#d6c8c8, #ffffff);
+    padding: 4rem 0;
+    width: 100%;
     text-align: center;
-    border-radius: 20px;
-    
 }
 
-.texto {
-    box-shadow: 1px 5px 5px;
-    background-color: rgb(114, 156, 47);
-    width: 700px;
-    height: 250px;
-    margin-left: auto;
-    margin-right: auto; 
-    border-radius: 20px;
-
+.cabecera__titulo{
+    font-size: 3rem;
+    text-decoration: underline;
 }
 
-.texto__input {
-    font-weight: bold;
-    box-shadow: 1px 5px 5px;
+.instrucciones{
+    width: 100%;
     text-align: center;
-    font-size: 15px;
-    width: 300px;
-    height: 150px;
-    background-color: rgb(203, 221, 174);
-    margin-left: 37.5px;
-    margin-top: 20px;
-    border-radius: 20px;
+    margin-bottom: 1rem;
 }
 
-.texto__output {
-    font-weight: bold;
-    box-shadow: 1px 5px 5px;
+.instrucciones__titulo{
+    font-size: 1.5rem;
+    text-transform: lowercase;
+    padding-bottom: 2rem;
+}
+
+.texto{
+    vertical-align: top;
+    display: flex;
+    justify-content: space-around;
+    align-items: top;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.texto__contenedor{
+    display: flex;
+    flex-direction: column;
+}
+
+.texto__input{
+    border: dotted;
+    border-radius: 2rem;
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.2rem;
     text-align: center;
-    font-size: 15px;
-    width: 300px;
-    height: 150px;
-    background-color: rgb(203, 221, 174);
-    border-radius: 20px;
-
+    width: 50vh;
+    height: 30vh;
+    margin-bottom: 2rem;
 }
 
-.boton {
-    box-shadow: 1px 5px 5px;
-    background-color: rgb(168, 209, 103);
-    width: 700px;
-    height: 50px;
-    margin-top: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius: 20px;
-}
-
-.boton__encriptar {
-    margin-top: 10px;
-    margin-left: 37.5px;
-    font-size: 20px;
-    height: 30px;
-    color: white;
-    background-color: rgb(4, 70, 10);
-    border-radius: 10px;
-
-}
-
-.boton__desencriptar {
-    font-size: 20px;
-    height: 30px;
-    color: white;
-    border-radius: 10px;
-    background-color: rgb(4, 70, 10);
-}
-
-.instructivo p {
+.texto__output{
+    border: dotted;
+    border-radius: 2rem;
+    font-family: 'Old Standard TT', serif;
+    font-size: 1.2rem;
     text-align: center;
-    font-weight: bold;
+    width: 50vh;
+    height: 30vh;
+    margin-bottom: 2rem;
 }
 
-.texto p {
-    margin: 10px 80px;
-    margin-bottom: 0px;
-    
-}
-
-.pie-de-pagina{
-    text-align: center;
-    margin-top: 450px;
+button{
+    background: #e7d9d9;
+    border: solid black 2px;
+    border-radius: .5rem;
+    font-family: 'Old Standard TT', serif;
+    margin: 0 auto 2rem;
+    height: 2rem;
+    text-transform: uppercase;
+    vertical-align: center;
+    width: 50%;
 }

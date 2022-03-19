@@ -1,40 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
+<html lang="es">
 
-    
-    <div class="titulo">
-        <h1 class="titulo__h1">ENCRIPTADOR DE TEXTO</h1>
-    </div>
-    <div class="instructivo">
-        <p>INGRESAR SOLO LETRAS MINUSCULAS, SIN ACENTOS.</p>
-    </div>
-    <div id="texto" class="texto">
-        <p>ingrese su texto aqui</p>
-        <textarea class="texto__input" id="texto__input"></textarea>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:wght@700&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header class="cabecera">
+
+            <h1 class="cabecera__titulo">
+                ENCRIPTADOR DE TEXTO
+            </h1>
+
+        </header>
         
-        <textarea class="texto__output" id="texto__output"></textarea>
-    </div>
+        <section class="instrucciones">
 
-    <div class="boton">
-        <button class="boton__encriptar">encriptar</button>
-        <button class="boton__desencriptar">desencriptar</button>
-        <!--<button class="boton-copiar">copiar</button>-->
-    </div>
+            <h2 class="instrucciones__titulo">
+                INGRESAR SOLO LETRAS MINUSCULAS, SIN ACENTOS
+            </h2>
 
-    <script src="js/principal.js"></script>
+        </section>
 
-</body>
-<footer>
-    <div class="pie-de-pagina">
-        <h2>Cristian Vera © 2022</h2>
-    </div>
-</footer>
+        
+        <section class="texto">
+            
+            <div class="texto__contenedor">
+                <input class="texto__input" type="text" placeholder="ingrese su texto aqui">
+                <button class="boton__encriptar">encriptar</button>
+                <button class="boton__desencriptar">desencriptar</button>
+            </div>
+            
+            <div class="texto__contenedor">
+                <input class="texto__output" type="text" placeholder="aqui aparecera su texto encriptado/desencriptado">
+                <button class="boton__copiar">copiar</button>
+            </div>
+            
+
+        </section>
+        
+        <script src="js/principal.js"></script>
+
+    </body>
+
+    <footer>
+        <div class="pie-de-pagina">
+            <h2>Cristian Vera © 2022</h2>
+        </div>
+    </footer>
+
 </html>

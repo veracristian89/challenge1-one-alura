@@ -17,6 +17,8 @@ function encriptar(){
 
     textoMostrado.value = textoIngresado
 
+    textoIngresado.value = ""
+
     
 }
 
