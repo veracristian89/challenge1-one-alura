@@ -5,33 +5,62 @@
 //La letra "o" es convertida para "ober"
 //La letra "u" es convertida para "ufat"
 
+let botonEncriptar = document.querySelector(".boton__encriptar");
+let botonDesencriptar = document.querySelector(".boton__desencriptar");
+let botonCopiar = document.querySelector(".boton__copiar")
+let textoIngresado = document.querySelector(".texto__input");
+let textoMostrado = document.querySelector(".texto__output");
 
-var botonEncriptar = document.querySelector(".boton__encriptar");
-var botonDesencriptar = document.querySelector(".boton__desencriptar");
+// validando el texto ingresado
+
+function textoValido(){
+    let textoAValidar = textoIngresado.value.toLowerCase();
+    if (textoAValidar==""){
+        return false;
+    }else if (textoAValidar.includes("á")||textoAValidar.includes("é")||textoAValidar.includes("í")||textoAValidar.includes("ó")||textoAValidar.includes("ú")){
+        return false;
+    }else{
+        return true;
+    }
+}
 
 function encriptar(){
-    var textoIngresado = document.querySelector(".texto__input").value;
-    var textoMostrado = document.querySelector(".texto__output");
- 
-    textoIngresado = textoIngresado.replace(/e/g,"enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g,"ober").replace(/u/g,"ufat");
+    let textoAEncriptar = textoIngresado.value.toLowerCase();
 
-    textoMostrado.value = textoIngresado
+    textoAEncriptar = textoAEncriptar.replace(/e/g,"enter").replace(/i/g, "imes").replace(/a/g, "ai").replace(/o/g,"ober").replace(/u/g,"ufat");
 
-    textoIngresado.value = ""
-
-    
+    textoMostrado.value = textoAEncriptar
 }
-
-botonEncriptar.addEventListener("click", encriptar);
 
 function desencriptar(){
-    var textoIngresado = document.querySelector(".texto__input").value;
-    var textoMostrado = document.querySelector(".texto__output");
+    let textoADesencriptar = textoIngresado.value.toLowerCase();
 
-    textoIngresado = textoIngresado.replace(/enter/g,"e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g,"o").replace(/ufat/g,"u");
+    textoADesencriptar = textoADesencriptar.replace(/enter/g,"e").replace(/imes/g, "i").replace(/ai/g, "a").replace(/ober/g,"o").replace(/ufat/g,"u");
 
-    textoMostrado.value = textoIngresado
-    
+    textoMostrado.value = textoADesencriptar
 }
 
-botonDesencriptar.addEventListener("click", desencriptar)
+botonEncriptar.addEventListener("click", function(){
+    
+    if (textoValido()){
+        encriptar()
+    }else{
+        alert("ingrese un texto valido: el campo de texto no puede estar vacio ni contener caracteres especiales")
+    }
+    textoIngresado.value = ""
+});
+
+botonDesencriptar.addEventListener("click", function(){
+    if (textoValido()){
+        desencriptar()
+    }else{
+        alert("ingrese un texto valido")
+    }
+    textoIngresado.value = ""
+});
+
+botonCopiar.addEventListener("click", function(){
+    let textoACopiar = document.getElementById("texto__output")
+    navigator.clipboard.writeText(textoACopiar.value)
+    textoACopiar.value = ""
+});
