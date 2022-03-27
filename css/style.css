@@ -52,7 +52,7 @@ body{
 }
 
 .texto__input:hover{
-    text-decoration: #636363 underline;
+    box-shadow: inset #888888 1px 1px 15px;
 }
 
 .texto__output{
@@ -69,7 +69,7 @@ body{
 }
 
 .texto__output:hover{
-    text-decoration: #636363 underline;
+    box-shadow: inset #888888 1px 1px 15px;
 }
 
 button{
