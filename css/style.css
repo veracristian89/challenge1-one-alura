@@ -40,6 +40,7 @@ body{
 }
 
 .texto__input{
+    outline: none;
     border: dotted;
     border-radius: 2rem;
     font-family: 'Old Standard TT', serif;
@@ -56,6 +57,7 @@ body{
 }
 
 .texto__output{
+    outline: none;
     border-style: none;
     border: dotted;
     border-radius: 2rem;
